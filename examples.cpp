@@ -5,25 +5,34 @@ int main () {
 int room_width = 5, room_length = 10;
 float room_radius = 10.0;
 float room_circle_area = (room_radius*room_radius)*3.14;
-bool this_is_always_true = true;
+bool keep_running = true;
+char question = 'y';
 
-cout << "Enter your first number: ";
-cin >> room_length;
-cout << "Enter your second number: ";
-cin >> room_width;
+while (keep_running){
 
 
-if(room_length == room_width) {
-	cout << "Length and Width are the same" << endl;
-} else {
-cout << "Length and Width are not the same" << endl;
+	cout << "Enter your first number: ";
+	cin >> room_length;
+	cout << "Enter your second number: ";
+	cin >> room_width;
+
+
+	if(room_length == room_width) {
+		cout << "Length and Width are the same" << endl;
+	} else {
+	cout << "Length and Width are not the same" << endl;
+	}
+	if (room_length > room_width) {
+		cout << "length is greater than width";
+	} else {
+		cout << "width is greater than length or equal" << endl;
+	}
+	cout << "Run again (y/n): ";
+	cin >> question;
+	if ( (question != 'y') && (question != 'y'))	{ keep_running = false;
+		
+	}
 }
-if (room_length > room_width) {
-	cout << "length is greater than width";
-} else {
-	cout << "width is greater than length" << endl;
-}
-
 
 //Printing out
 cout << " Our first number is " << room_width << endl;
